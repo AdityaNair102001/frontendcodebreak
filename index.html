@@ -7,7 +7,7 @@
     <style>
         label input[type="file"]{
             display: none;
-            align-content: center;
+            /* align-content: center; */
         }
 
         label{
@@ -15,14 +15,16 @@
             text-align: center;
             line-height: 150%;
             font-size: 2rem;            
-            background-color:blue;
+            background-color:white;
             margin-left: 50%;
             border-top-left-radius: 1rem;
             border-top-right-radius: 1rem;
             border-bottom-left-radius: 1rem;
             border-bottom-right-radius: 1rem;
-            padding-right: 1rem;
-            padding-left: 1rem;
+            padding: 0.3rem 1.5rem;
+            margin-top: 59px;
+    
+            
 
         }
 
@@ -32,16 +34,16 @@
         }
  
          .row{
-            position: fixed;
-            left: 35%;
+            /* position: absolute; */
+           margin-left: 37%;
 
             }  
         body{
-            position: relative;
+           
             width: 1440px;
             height: 1024px;
 
-            background: linear-gradient(180deg, #FFFFFF 23.44%, rgba(255, 255, 255, 0) 100%), #1067B7;
+            background: linear-gradient(180deg, #2E0916 23.44%, #2E1E65 100%),  #382c2c;
         }
 
         .image-preview{
@@ -54,10 +56,8 @@
     </style>
 </head>
 <body>
-    <label for="uploadedhere" >Choose
-        <input type="file" id="uploadedhere" onchange="myfun()">
-    </label>
- 
+   
+  
     <div class="row">
         <div class="col">
             
@@ -70,6 +70,10 @@
         </div>
      </div>
 
+     <label for="uploadedhere" >Choose
+        <input type="file" id="uploadedhere" onchange="myfun()">
+    </label>
+    
    
      
      <script>
