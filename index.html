@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label input[type="file"]{
+            display: none;
+            align-content: center;
+        }
+
+        label{
+            /* display: block; */
+            text-align: center;
+            line-height: 150%;
+            font-size: 2rem;            
+            background-color:blue;
+            margin-left: 50%;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            padding-right: 1rem;
+            padding-left: 1rem;
+
+        }
+
+        img{
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+ 
+         .row{
+            position: fixed;
+            left: 35%;
+
+            }  
+        body{
+            position: relative;
+            width: 1440px;
+            height: 1024px;
+
+            background: linear-gradient(180deg, #FFFFFF 23.44%, rgba(255, 255, 255, 0) 100%), #1067B7;
+        }
+
+        .image-preview{
+            display: flex;
+            align-items: center;
+            justify-content: center
+            
+        }
+
+    </style>
+</head>
+<body>
+    <label for="uploadedhere" >Choose
+        <input type="file" id="uploadedhere" onchange="myfun()">
+    </label>
+ 
+    <div class="row">
+        <div class="col">
+            
+                <img src="unnamed.jpg" height="150" width="250" id="changeimage1">
+                 <img src="unnamed.jpg" height="150" width="250"  id="changeimage2">
+        </div>
+        <div class="col">
+            <img src="unnamed.jpg" height="150" width="250"  id="changeimage3">
+            <img src="unnamed.jpg" height="150" width="250"  id="changeimage4">
+        </div>
+     </div>
+
+   
+     
+     <script>
+        var i = 0;
+function myfun(){
+i++;
+
+ var x = 	document.getElementById("uploadedhere").files[0];
+ var currentimage1  = document.getElementById("changeimage1");
+  var currentimage2  = document.getElementById("changeimage2");
+  var currentimage3  = document.getElementById("changeimage3");
+  var currentimage4  = document.getElementById("changeimage4");
+  
+
+ 
+var reader =   new FileReader();
+ 
+ reader.onload = function(){
+ 
+ if(i == "1"){
+currentimage1.src = reader.result;
+}
+
+if(i == "2"){
+currentimage2.src = reader.result;
+}
+if(i == "3"){
+currentimage3.src = reader.result;
+}
+if(i == "4"){
+currentimage4.src = reader.result;
+}
+}
+ 
+
+
+
+reader.readAsDataURL(x);
+}
+
+</script>
+
+</body>
+</html>
